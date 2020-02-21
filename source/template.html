@@ -1,0 +1,47 @@
+<div class="label default-question-text-size">{{{LABEL}}}</div>
+
+<!-- If there is an image specified in the media:image column, show it here -->
+{{#MEDIAIMAGE}}
+    <img src="{{MEDIAIMAGE}}" />
+{{/MEDIAIMAGE}}
+
+<!-- If there is audio specified in the media:audio column, show it here -->
+{{#MEDIAAUDIO}}
+    <audio controls>
+        <source src="{{MEDIAAUDIO}}">
+        Your browser does not support the audio element.
+    </audio>
+{{/MEDIAAUDIO}}
+
+<!-- If there is a video specified in the media:video column, show it here -->
+{{#MEDIAVIDEO}}
+    <video width="100%" height="*" controls>
+        <source src="{{MEDIAVIDEO}}">
+        Your browser does not support the video tag.
+    </video>
+{{/MEDIAVIDEO}}
+
+<div class="hint default-hint-text-size">{{{HINT}}}</div>
+
+<form class="choices-container">
+  {{#CHOICES}}
+  <div class="choice-container">
+    <input 
+      type="radio" 
+      value="{{CHOICE_VALUE}}" 
+      name="opt" 
+      class="choice-input"
+      id="{{CHOICE_INDEX}}"
+      {{#CHOICE_SELECTED}}checked="checked"{{/CHOICE_SELECTED}} 
+      {{#READONLY}}disabled{{/READONLY}}
+    />
+    <label class="choice-label" for="{{CHOICE_INDEX}}">
+      <div class="choice-label-text default-answer-text-size">{{CHOICE_LABEL}}</div>
+      <!-- if there's a choice image, show that image-->
+      {{#CHOICE_IMAGE}}<img src="{{CHOICE_IMAGE}}" class="choice-label-image" />{{/CHOICE_IMAGE}}
+      <!-- this is the icon that shows up when the field uses the 'quick' appearance -->
+      <img class="quick-appearance-icon" src="{{PLUGINDIR}}/quick-appearance-icon.svg">
+    </label>
+  </div>
+  {{/CHOICES}}
+</form>
