@@ -1,5 +1,6 @@
 # Baseline select_multiple field
 
+_Note: this is a work in progress. This is not ready to be tested or used yet._
 ## Description
 
 A simple replacement for the default select_multiple field. Use this as a starting template when creating your own select_multiple field plug-in.
