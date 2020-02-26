@@ -1,3 +1,9 @@
+/*
+    ------------------------
+    Labels and hints
+    ------------------------
+*/
+
 .label {
     /* add style rules here to change how the label appears */
     margin: .75rem 0;
@@ -10,15 +16,23 @@
     font-style: italic;
 }
 
-/* choice spacing for web collect */
-.web-collect .choices-container {
+/* 
+    ------------------------
+    Choices
+    ------------------------
+*/
+
+/* choice spacing for web Collect */
+
+.web-collect .choice-container {
     margin: .2rem 0;
 }
 .web-collect .choice-container .choice-label {
     padding: .5rem;
 }
 
-/* choice spacing for android and ios collect */
+/* choice spacing for Android and iOS Collect */
+
 .android-collect .choice-container,
 .ios-collect .choice-container {
     margin: .1rem 0;
@@ -28,12 +42,13 @@
     padding: .9rem 0;
 }
 
+/* choice container layout */
+
 .choice-container {
     display: flex;
     align-items: baseline;
 }
 .choice-input {
-    font-size: 4rem;
     margin: 0 .5rem;
     cursor: pointer;
 }
@@ -42,7 +57,8 @@
     flex: 1;
 }
 
-/* formatting for disabled fields */
+/* disabled fields */
+
 .choice-input:disabled {
     cursor: default;
 }
@@ -51,7 +67,8 @@
     cursor: default;
 }
 
-/* formatting for choices with images */
+/* choices with images */
+
 .web-collect .choice-label-image {
     max-width: 100%;
 }
@@ -69,22 +86,5 @@
 }
 .android-collect .choice-label-image,
 .ios-collect .choice-label-image {
-    max-width: 75%; 
-}
-
-/* formatting for quick appearance styles */
-.appearance-quick .choice-container {
-    background-color: #EEE;
-}
-.appearance-quick .choice-container:hover {
-    background-color: #E1F4FD;
-}
-/* hide this icon by default */
-.quick-appearance-icon {
-    display: none;
-}
-.appearance-quick .quick-appearance-icon {
-    display: block;
-    height: 1em;
-    margin-left: auto;
+    max-width: 75%;
 }

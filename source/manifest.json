@@ -1,8 +1,8 @@
 {
-	"name" : "Baseline select_one field",
+	"name" : "Baseline select_multiple field",
 	"author" : "Dobility",
-	"version": "3.0.23",
-	"supportedFieldTypes": ["select_one"],
+	"version": "1.0.0",
+	"supportedFieldTypes": ["select_multiple"],
 	"hideDefaultRequiredMessage": false,
 	"hideDefaultConstraintMessage": false
 }
