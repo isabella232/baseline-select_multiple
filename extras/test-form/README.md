@@ -2,7 +2,7 @@
 
 ## What's in this test form?
 
-This form contains a comprehensive set of fields, which is intended to show all the possible states or configurations of a text field (cases). Each case has 2 fields:
+This form contains a comprehensive set of fields, which is intended to show all the possible states or configurations of a select_multiple field (cases). Each case has 2 fields:
 
 1. Without a field plug-in (default SurveyCTO appearance)
 1. With the *baseline-select_one* plug-in applied
