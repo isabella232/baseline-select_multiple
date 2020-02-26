@@ -7,8 +7,7 @@ var buttons = document.querySelectorAll('input[name="opt"]');
 function clearAnswer() {
   // go through each choice
   for (var i = 0; i < choicesEl.length; i++) {
-    choicesEl[i].classList.remove("chceked"); // remove the 'checked' class from the parent element
-    choicesEl[i].querySelectorAll('input').checked = false; // uncheck the checkbox input element
+    choicesEl[i].querySelector('input').checked = false; // uncheck the checkbox input element
     fieldProperties.CHOICES[i].CHOICE_SELECTED = false; // update the current answer 
   }
 }
@@ -16,15 +15,18 @@ function clearAnswer() {
 // Save the user's response (update the current answer)
 
 function change() {
-  fieldProperties.CHOICES[this.value].CHOICE_SELECTED = !fieldProperties
-    .CHOICES[this.value].CHOICE_SELECTED;
   var selected = [];
+  // go through each choice
   for (var i = 0; i < fieldProperties.CHOICES.length; i++) {
     var choice = fieldProperties.CHOICES[i];
-    if (choice.CHOICE_SELECTED) {
-      selected.push(choice.CHOICE_INDEX);
+    if (choice.CHOICE_VALUE === this.value) { // check/uncheck based on the value of the choice
+      choice.CHOICE_SELECTED = !choice.CHOICE_SELECTED;
+    }
+    if (choice.CHOICE_SELECTED) { // include only selected options in the final answer
+      selected.push(choice.CHOICE_VALUE);
     }
   }
+
   setAnswer(selected.join(" "));
 }
 
