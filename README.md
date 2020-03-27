@@ -6,7 +6,7 @@
 
 A simple replacement for the default select_multiple field. Use this as a starting template when creating your own select_multiple field plug-in.
 
-[![Download now](extras/download-button.png)](baseline-select_multiple.fieldplugin.zip)
+[![Download now](extras/download-button.png)](https://github.com/surveycto/baseline-select_multiple/raw/master/baseline-select_multiple.fieldplugin.zip)
 
 ## Default SurveyCTO feature support
 
